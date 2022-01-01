@@ -34,28 +34,33 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.1   | Linux            |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
-
+| Jump Box | Gateway  | 10.0.0.4   | Linux            |
+| Web-1    | WebServer| 10.0.0.7   | Linux            |
+|          | Docker   |            |                  |
+|          | DVWA     |            |                  |
+| Web-2    | Webserver| 10.0.0.8   | Linux            |
+|          | Docker   |            |                  |
+|          | DVWA     |            |                  |
+| ElkServer|Logserver | 10.1.0.4   |  Linux           |
+                                
 ### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+Only the jump box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+Personal IP Address
 
-Machines within the network can only be accessed by _____.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+Machines within the network can only be accessed by SSH.
+- The Elk Server is accessible by SSH from JumpBox from web access from Personal IP Address.
 
 A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
+| Jump Box | No                  | Personal IP Address  |
+| Web 1    |Yes Thru LoadBalance |  10.0.0.7            |
+| Web 2    |Yes Thru LoadBalancer|  10.0.0.8            |
+|ElkServer | No                  | Personal
 
 ### Elk Configuration
 
