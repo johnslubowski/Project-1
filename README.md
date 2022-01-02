@@ -3,7 +3,8 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![TODO: Update the path with the name of your diagram](Images/diagram_filename.png)
+![TODO: Update the path with t![diagram](https://user-images.githubusercontent.com/87623954/147887245-759fdece-8df9-43c4-9a39-99a15581a7ce.png)
+he name of your diagram](Images/diagram_filename.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
 
@@ -22,12 +23,13 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly _____, in addition to restricting _____ to the network.
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
-
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
+- : What aspect of security do load balancers protect?Load Balancing ensures availability to the web-servers  What is the advantage of a jump box?_
+   The advantage of using a JumpBox is having the ease of administration of multiple systems'
+   
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the Logs and system metrics.
+- Filebeat watches for log files/locations and collect log events. 
+- Metricbeat records metrics and statistical data from services running on the server.
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
